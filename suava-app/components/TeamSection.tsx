@@ -1,66 +1,80 @@
 import Image from "next/image";
+import { FaLinkedin } from 'react-icons/fa'; 
 
 const TeamSection = () => {
-    const team = [
-        {
-            name: 'IBRAHIM O. HAMZAT ',
-            role: 'CEO &FONDER',
-            Image: '/team/two.jpg',
-            describe: 'A Business/Data Analyst, Copywriter & Researcher'
-        },
-        {
-            name: 'CHiNEDU J. OZULU ',
-            role: 'Co-FOUNDER & COO', 
-            Image: '/team/five.jpg',
-            describe: 'Product Designer and Web Developer'
-        },
-        {
-            name: 'FEMI BANDELE ',
-            role: 'Co-FOUNDER & CTO',
-            Image: '/team/three.jpg',
-            describe: 'Full Stack Developer'
-        },
+  const teamMembers = [
+    {
+      name: 'IBRAHIM O. HAMZAT',
+      title: 'Founder & CEO',
+      details: 'A Business-Data Analyst, Copywriter & Researcher',
+      imageSrc: '/team/two.jpg', 
+      linkedinUrl: 'https://www.linkedin.com/in/ibrahim-hamzat/', 
+    },
+    {
+      name: 'CHINEDU J. OZULU',
+      title: 'Co-founder & COO',
+      details: 'Product Designer and Web Developer',
+      imageSrc: '/team/five.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/chinedu-ozulu/', 
+    },
+    {
+      name: 'FEMI BANDELE',
+      title: 'Co-founder & CTO',
+      details: 'Full Stack Developer',
+      imageSrc: '/team/three.jpg', // 
+      linkedinUrl: 'https://www.linkedin.com/in/femi-bandele/', 
+    },
+    {
+      name: 'IDIAT SHIOLE',
+      title: 'Quality Assurance Advisor (QAA)',
+      details: '3D Visual Designer/XR Activist/UX Global Talent, Founder, Modest Atelier',
+      imageSrc: '/team/four.jpg', 
+      linkedinUrl: 'https://www.linkedin.com/in/idiat-shiole/', 
+    },
+    {
+      name: 'RAHAMAN',
+      title: 'Software Engineer',
+      details: 'Software Engineer and Electrical & Electronics Engineer',
+      imageSrc: '/team/five.jpg', //
+      linkedinUrl: 'https://www.linkedin.com/in/rahman-engineer/',
+    },
+    {
+      name: 'CHINONSO',
+      title: 'Software Engineer',
+      details: 'Software Engineer and Electrical & Electronics Engineer',
+      imageSrc: '/team/two.jpg', 
+      linkedinUrl: 'https://www.linkedin.com/in/chinonso-engineer/', 
+    },
+  ];
 
-        {
-            name: 'IDIAT SHIOLE ',
-            role: 'QUALITY ASSURANCE ADVISOR (QAA)',
-            Image: '/team/four.png',
-            describe: '3D Visual Designer/ XR Advocate/UK Global Talent. Founder, Hadeeart Atellerr'
-        },{
-            name: 'RAHAMAN ',
-            role: 'SOFTWARE ENGINEER',
-            Image: '/team/five.jpg',
-            describe: 'Software Engineer and Electrical & Electronical Engineer.'
-        },{
-            name: 'CHINONOSO ',
-            role: 'SOFTWARE ENGINEER',
-            Image: '/team/five.jpg',
-            describe: 'Software Engineer and Electrical & Electronical Engineer.'
-        },
-    ];
-
-    return (
-        <section className="py-16 px-4 sm:px-6 md:px-12 bg-gray-50">
-          <h3 className="text-2xl sm:text-3xl font-semibold text-center mb-10">Meet the Team</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {team.map((member, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <Image
-                  src={member.Image}
-                  alt={member.name}
-                  width={120}
-                  height={120}
-                  className="rounded-full object-cover"
-                />
-                <h4 className="font-bold mt-4 text-lg">{member.name}</h4>
-                <p className="text-sm text-gray-600">{member.role}</p>
-                <p className="text-sm text-gray-500 mt-2">{member.describe}</p>
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-6 lg:px-8 text-center">
+        <h2 className="text-2xl font-bold text-gray-800 mb-2">MEET OUR TEAM</h2>
+        <p className="text-gray-600 mb-8">
+          We are the people that make up the SUUAVE team. Diverse in skills and abilities,
+          but united by one vision and mission.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {teamMembers.map((member, index) => (
+            <div key={index}> 
+              <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden">
+                <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" className="rounded-full" />
               </div>
-            ))}
-          </div>
-        </section>
-      );
-
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-1">{member.name}</h3>
+                <p className="text-sm font-semibold text-[#3A98BB] mb-1">{member.title}</p>
+                <p className="text-xs text-gray-500 mb-2">{member.details}</p>
+                <a href={member.linkedinUrl} className="text-gray-400 hover:text-indigo-600">
+                  <FaLinkedin className="w-5 h-5 fill-current" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default TeamSection;
