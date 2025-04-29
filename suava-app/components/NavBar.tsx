@@ -15,19 +15,29 @@ const NavBar = () => {
           </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-white items-center text-sm">
+        
+        <ul className="hidden md:flex gap-8 text-white items-center text-sm justify-items-center">
+            <div className="hidden md:flex gap-8 text-white items-center text-sm justify-items-center">
             <li className="cursor-pointer hover:text-gray-300">Blogs</li>
             <li className="cursor-pointer hover:text-gray-300">How it works</li>
             <li className="cursor-pointer hover:text-gray-300">FAQS</li>
             <li className="cursor-pointer hover:text-gray-300">About us</li>
-            <li className="cursor-pointer hover:text-gray-300">Login</li>
+       
+            </div>
+              
+        </ul>
 
-               <li>
-                <button className="bg-gradient-to-r from-[#C3E2F9] to-[#E9F5FF] text-[#002D4F] font-semibold py-2 px-5 rounded-full">
+        <div className="hidden md:flex gap-8 text-white items-center text-sm justify-items-center ">
+                <li className="cursor-pointer hover:text-gray-300 list-none">Login</li>
+                <li className="list-none">
+                <button className="bg-gradient-to-r from-[#C3E2F9] to-[#E9F5FF] text-[#002D4F] font-semibold py-2 px-5 rounded-full list-none">
                     Get Started
                 </button>
                </li>
-        </ul>
+                </div>
+
+
+       
 
         {/* Mobile Hambuger */}
         <div className="md:hidden" onClick={() => setIsOpen(!isOpen)}>

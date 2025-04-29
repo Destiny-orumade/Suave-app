@@ -52,14 +52,14 @@ const TeamSection = () => {
       <div className="container mx-auto px-6 lg:px-8 text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">MEET OUR TEAM</h2>
         <p className="text-gray-600 mb-8">
-          We are the people that make up the SUUAVE team. Diverse in skills and abilities,
+          We are the people that make up the SUUAVE team. Diverse in skills and abilities,<br />
           but united by one vision and mission.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index}> 
-              <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden">
-                <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" className="rounded-full" />
+              <div className="relative w-48 h-48 mx-auto  overflow-hidden rounded-t-[100px] rounded-br-[100px]">
+                <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" className="aspect-square w-full" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800 mb-1">{member.name}</h3>

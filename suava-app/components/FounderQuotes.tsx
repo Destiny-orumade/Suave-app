@@ -17,19 +17,19 @@ const FounderQuotes = () => {
           </div>
           <div className="flex items-center justify-center">
 
-            {/* Placeholder for left shape frame */}
-            <div className="w-12 h-12 bg-gray-200 mr-4"></div>
-            <div className="bg-gray-50 rounded-lg shadow-md p-6 lg:p-8 italic text-gray-700"> 
-              <p>
+      
+           
+            <div className="relative"> 
+              <p className="bg-gray-50 rounded-lg shadow-md p-20 lg:p-8 italic text-gray-700 h-40 rounded-t-[100px] rounded-br-[100px] ">
                 African fashion industry needs to be illuminated and sold globally, as it has yet to tap into its full
                 potential. I envision a platform that connects talented African creatives and unlocks new levels of
                 innovation in the industry, similar to how digital streaming platforms have globalized the beauty of
                 Nollywood, Afrobeat, Amapiano etc
               </p>
-            </div>
+              <img className="absolute -top-25 left-25 " src="/icons/fr1.svg" alt="" />
+              <img className="absolute -bottom-25 right-25" src="/icons/fr2.svg" alt="" />
             
-            {/* Placeholder for right shape frame */}
-            <div className="w-12 h-12 bg-gray-200 ml-4"></div>
+            </div>
           </div>
         </div>
       </section>
