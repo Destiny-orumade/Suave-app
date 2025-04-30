@@ -21,13 +21,13 @@ const TeamSection = () => {
       name: 'FEMI BANDELE',
       title: 'Co-founder & CTO',
       details: 'Full Stack Developer',
-      imageSrc: '/team/three.jpg', // 
+      imageSrc: '/team/three.jpg', 
       linkedinUrl: 'https://www.linkedin.com/in/femi-bandele/', 
     },
     {
       name: 'IDIAT SHIOLE',
       title: 'Quality Assurance Advisor (QAA)',
-      details: '3D Visual Designer/XR Activist/UX Global Talent, Founder, Modest Atelier',
+      details: '3D Visual Designer/XR Activist/UX  Global Talent, Founder, Modest Atelier' ,
       imageSrc: '/team/four.jpg', 
       linkedinUrl: 'https://www.linkedin.com/in/idiat-shiole/', 
     },
@@ -65,8 +65,8 @@ const TeamSection = () => {
                 <h3 className="text-lg font-semibold text-gray-800 mb-1">{member.name}</h3>
                 <p className="text-sm font-semibold text-[#3A98BB] mb-1">{member.title}</p>
                 <p className="text-xs text-gray-500 mb-2">{member.details}</p>
-                <a href={member.linkedinUrl} className="text-gray-400 hover:text-indigo-600">
-                  <FaLinkedin className="w-5 h-5 fill-current" />
+                <a href={member.linkedinUrl} className="text-black hover:text-gray-400 mr- hover:scale-110 transition-transform duration-300">
+                  <FaLinkedin className="w-5 h-5 fill-current ml-20" />
                 </a>
               </div>
             </div>
